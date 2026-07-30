@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Northbridge Wealth Advisory Copilot (Demo)</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Northbridge Wealth Advisory Copilot</h1>
+    <p class="subtitle">
+      Technology demo only &mdash; "Northbridge Financial Group" is a fictional bank,
+      all data is synthetic, and nothing here is real investment advice.
+    </p>
+  </header>
+
+  <main class="app-main">
+    <section class="controls">
+      <label for="client-select">Synthetic client</label>
+      <select id="client-select"></select>
+      <span id="mode-badge" class="badge">loading...</span>
+    </section>
+
+    <section id="chat-log" class="chat-log" aria-live="polite"></section>
+
+    <form id="chat-form" class="chat-form">
+      <input
+        id="chat-input"
+        type="text"
+        autocomplete="off"
+        placeholder="Ask about your holdings, risk profile, allocation drift, or a fund fact sheet..."
+        maxlength="4000"
+      />
+      <button type="submit">Send</button>
+    </form>
+
+    <p class="disclaimer">
+      Educational demo only. Not real investment advice. See
+      <code>GOVERNANCE.md</code> in the repository for details on the illustrative
+      suitability guardrail.
+    </p>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

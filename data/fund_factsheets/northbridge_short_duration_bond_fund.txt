@@ -1,0 +1,27 @@
+Fund Name: Northbridge Short Duration Bond Fund
+
+FICTIONAL FUND -- FOR DEMONSTRATION PURPOSES ONLY. This fact sheet describes a
+synthetic fund created for a software portfolio project and does not represent a
+real, offered, or registered investment product.
+
+Objective: Seeks current income and capital preservation by investing in a
+diversified portfolio of short-duration, investment-grade fixed income securities.
+Designed for investors prioritizing stability over growth.
+
+Asset Class: Bonds (Fixed Income)
+
+Risk Level: Conservative. Lower expected volatility than equity funds, but value
+can still decline, particularly if interest rates rise. No return or principal is
+guaranteed; this is not a bank deposit and is not FDIC insured.
+
+Top Holdings (illustrative, synthetic): short-duration government bond sleeve
+(40%), investment-grade corporate bond sleeve (35%), agency mortgage-backed
+securities sleeve (15%), cash and equivalents (10%).
+
+Expense Ratio: 0.32% (synthetic figure for demo purposes)
+
+Suitability Note: Generally appropriate for conservative investors seeking income
+and relative stability, including those with a shorter time horizon. This fact
+sheet is educational and does not constitute individualized investment advice;
+consult a licensed financial advisor to determine suitability for your
+circumstances.

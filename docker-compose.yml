@@ -1,0 +1,23 @@
+# One-command local dev spin-up: `docker compose up --build`
+# Runs fully offline in mock mode unless a .env file with OPENAI_API_KEY is present.
+
+services:
+  wealth-advisory-copilot:
+    build: .
+    image: wealth-advisory-copilot:local
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: ./.env
+        required: false
+    environment:
+      ENVIRONMENT: local
+      LOG_LEVEL: INFO
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

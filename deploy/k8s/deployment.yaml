@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wealth-advisory-copilot
+  labels:
+    app: wealth-advisory-copilot
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: wealth-advisory-copilot
+  template:
+    metadata:
+      labels:
+        app: wealth-advisory-copilot
+    spec:
+      # Run as a non-root, non-privileged pod -- matches the Dockerfile's non-root
+      # `appuser` (uid 1000) and satisfies typical restricted PodSecurity/SCC policies.
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        fsGroup: 1000
+      containers:
+        - name: wealth-advisory-copilot
+          image: wealth-advisory-copilot:local
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+              name: http
+          envFrom:
+            - configMapRef:
+                name: wealth-advisory-copilot-config
+            # Optional: only needed for live (non-mock) mode. Create with:
+            #   kubectl create secret generic wealth-advisory-copilot-secrets \
+            #     --from-literal=OPENAI_API_KEY=sk-...
+            - secretRef:
+                name: wealth-advisory-copilot-secrets
+                optional: true
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: false # /app/logs is written at runtime
+            capabilities:
+              drop: ["ALL"]
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "256Mi"
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10

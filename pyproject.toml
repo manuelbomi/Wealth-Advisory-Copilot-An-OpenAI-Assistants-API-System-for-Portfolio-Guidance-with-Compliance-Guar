@@ -1,0 +1,30 @@
+[project]
+name = "wealth-advisory-copilot"
+version = "1.0.0"
+description = "OpenAI Assistants API system for portfolio guidance with compliance guardrails (demo)"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+# E501: line length handled by formatter, not worth failing CI over.
+# B008: FastAPI's `Depends(...)` in a function default is the framework's
+#       documented dependency-injection pattern, not the mutable-default-argument
+#       footgun this rule targets.
+# UP042: we deliberately use `class X(str, enum.Enum)` (not `enum.StrEnum`) for
+#        broad pattern familiarity and identical JSON-serialization behavior.
+ignore = ["E501", "B008", "UP042"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_ignores = true
+disallow_untyped_defs = false
+exclude = ["tests/"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

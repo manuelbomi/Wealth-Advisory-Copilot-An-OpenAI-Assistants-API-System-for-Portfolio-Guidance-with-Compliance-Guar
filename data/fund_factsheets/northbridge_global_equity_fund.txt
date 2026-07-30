@@ -1,0 +1,29 @@
+Fund Name: Northbridge Global Equity Fund
+
+FICTIONAL FUND -- FOR DEMONSTRATION PURPOSES ONLY. This fact sheet describes a
+synthetic fund created for a software portfolio project and does not represent a
+real, offered, or registered investment product.
+
+Objective: Seeks long-term capital growth by investing primarily in publicly traded
+equity securities of companies located across developed and emerging markets. The
+fund is designed for investors with a higher risk tolerance and a long time horizon.
+
+Asset Class: Equities
+
+Risk Level: Aggressive. Higher expected volatility than a balanced or fixed-income
+fund. Investors should expect significant fluctuations in value, including periods
+of loss. No return is guaranteed.
+
+Top Holdings (illustrative, synthetic): diversified North American equities basket
+(35%), diversified European equities basket (25%), diversified Asia-Pacific
+equities basket (20%), diversified emerging markets basket (15%), cash and
+equivalents (5%).
+
+Expense Ratio: 0.68% (synthetic figure for demo purposes)
+
+Suitability Note: Generally appropriate for aggressive-risk investors seeking
+long-term growth who can tolerate significant short-term volatility. Not
+appropriate for investors with a short time horizon or low risk tolerance. This
+fact sheet is educational and does not constitute individualized investment
+advice; consult a licensed financial advisor to determine suitability for your
+circumstances.

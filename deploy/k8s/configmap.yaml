@@ -1,0 +1,17 @@
+# Non-secret configuration. OPENAI_API_KEY, if used, must come from a Secret
+# (see deploy/OPENSHIFT.md) -- never put it in a ConfigMap.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wealth-advisory-copilot-config
+  labels:
+    app: wealth-advisory-copilot
+data:
+  ENVIRONMENT: "production"
+  LOG_LEVEL: "INFO"
+  LOG_JSON: "true"
+  OPENAI_MODEL: "gpt-4o-mini"
+  OPENAI_REQUEST_TIMEOUT_SECONDS: "30"
+  OPENAI_MAX_RETRIES: "4"
+  CIRCUIT_BREAKER_FAILURE_THRESHOLD: "5"
+  CIRCUIT_BREAKER_RESET_SECONDS: "30"

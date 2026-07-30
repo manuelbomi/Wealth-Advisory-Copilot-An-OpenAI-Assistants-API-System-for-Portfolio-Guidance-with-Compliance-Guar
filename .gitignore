@@ -1,0 +1,32 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+build/
+dist/
+
+# --- Test / lint / type-check artifacts ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Logs / runtime data ---
+logs/*.jsonl
+logs/*.log
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
