@@ -5,12 +5,7 @@
 > client, portfolio, holding, and fund fact sheet in this repository is synthetic
 > data generated for demonstration purposes.
 >
-> **Not investment advice.** This is a software engineering technology demo, not
-> a real wealth-advisory product. Nothing it outputs is real investment advice.
-> The "suitability guardrail" described below is an illustrative, simplified
-> engineering pattern -- it is **not** a certified compliance control and has not
-> been reviewed by any legal/compliance/risk function. See
-> [`GOVERNANCE.md`](./GOVERNANCE.md) for the full disclaimer and limitations.
+
 
 ## Why this exists
 
@@ -296,3 +291,14 @@ openai-assistants-advisory-copilot/
 - A human-escalation path for `BLOCKED` guardrail outcomes, routing to a
   licensed advisor instead of just re-prompting.
 - Real OpenTelemetry SDK integration in place of the log-based tracing spans.
+
+
+
+
+[!NOTE]
+> **Nothing in this Demo Project is an investment advice.** This is a software engineering technology demo, not
+> a real wealth-advisory product. Nothing it outputs is real investment advice.
+> The "suitability guardrail" described below is an illustrative, simplified
+> engineering pattern -- it is **not** a certified compliance control and has not
+> been reviewed by any legal/compliance/risk function. See
+> [`GOVERNANCE.md`](./GOVERNANCE.md) for the full disclaimer and limitations.
