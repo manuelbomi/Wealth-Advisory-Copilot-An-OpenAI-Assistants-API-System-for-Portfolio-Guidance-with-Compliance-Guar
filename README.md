@@ -293,9 +293,6 @@ openai-assistants-advisory-copilot/
 - Real OpenTelemetry SDK integration in place of the log-based tracing spans.
 
 
-[!IMPORTANT]
-
-[!WARNING]
 
 [!NOTE]
 
