@@ -296,6 +296,7 @@ openai-assistants-advisory-copilot/
 
 
 [!NOTE]
+
 > **Nothing in this Demo Project is an investment advice.** This is a software engineering technology demo, not
 > a real wealth-advisory product. Nothing it outputs is real investment advice.
 > The "suitability guardrail" described below is an illustrative, simplified
